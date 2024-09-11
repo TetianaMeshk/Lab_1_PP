@@ -32,6 +32,7 @@ class Main{
             fib[i].num = f1;
             sum += f1;
             i++;
+            ggh
 
         }
     }
