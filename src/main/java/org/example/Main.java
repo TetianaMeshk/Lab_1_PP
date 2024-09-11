@@ -1,17 +1,38 @@
 package org.example;
+import java.util.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+class FibNumb{
+    int ordNum;
+    int num;
+    FibNumb(int oN, int n){
+        oN = ordNum;
+        n = num;
+    }
+    public int getOrdNum(){
+        return ordNum;
+    }
+    public int getNum(){
+        return num;
+    }
+}
+
+class Main{
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int N = 0, f1 = 1, f2 = 0, sum = 0;
+        if (args.length > 0)
+            System.out.println("Кількість чисел Фібоначчі: " + args[0]);
+        else {
+            Scanner reader = new Scanner(System.in);
+            System.out.print("Введіть кількість чисел Фібоначчі: ");
+            N = reader.nextInt();
+        }
+        FibNumb[] fib = new FibNumb[N];
+        for(int i = 0; i < fib.length; i++){
+            fib[i].ordNum = ++i;
+            fib[i].num = f1;
+            sum += f1;
+            i++;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
         }
     }
 }
