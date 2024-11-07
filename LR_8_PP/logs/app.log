@@ -1,0 +1,304 @@
+2024-11-07 19:38:51 [main] INFO : Ініціалізація меню.
+2024-11-07 19:38:51 [main] INFO : Завантаження овочів з файлу.
+2024-11-07 19:38:51 [main] INFO : Дані успішно завантажені з файлу: vegetables.txt
+2024-11-07 19:38:51 [main] INFO : Завантаження салату з файлу.
+2024-11-07 19:38:51 [main] INFO : Дані успішно завантажені з файлу: salad.txt
+2024-11-07 19:38:51 [main] INFO : Початок роботи меню.
+2024-11-07 19:39:08 [main] ERROR: Помилка введення: некоректне ціле число
+java.lang.NumberFormatException: For input string: "а"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:588)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at command.AddVegetable.getIntInput(AddVegetable.java:53)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+2024-11-07 19:39:30 [main] INFO : Овоч додано.
+2024-11-07 19:40:20 [main] INFO : Вихід з меню.
+2024-11-07 19:56:23 [main] INFO : Ініціалізація меню.
+2024-11-07 19:56:23 [main] INFO : Завантаження овочів з файлу.
+2024-11-07 19:56:23 [main] INFO : Дані успішно завантажені з файлу: vegetables.txt
+2024-11-07 19:56:23 [main] INFO : Завантаження салату з файлу.
+2024-11-07 19:56:23 [main] INFO : Дані успішно завантажені з файлу: salad.txt
+2024-11-07 19:56:23 [main] INFO : Початок роботи меню.
+2024-11-07 19:56:33 [main] ERROR: Помилка введення: некоректне ціле число
+java.lang.NumberFormatException: For input string: "ф"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:588)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at command.AddVegetable.getIntInput(AddVegetable.java:53)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+2024-11-07 19:56:34 [main] ERROR: Сталася помилка: 
+org.apache.logging.log4j.core.appender.AppenderLoggingException: An exception occurred processing Appender EmailLogger
+	at org.apache.logging.log4j.core.appender.DefaultErrorHandler.error(DefaultErrorHandler.java:96)
+	at org.apache.logging.log4j.core.config.AppenderControl.handleAppenderError(AppenderControl.java:170)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:163)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:683)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:641)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:624)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:560)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:163)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2168)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2122)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2105)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1980)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1946)
+	at org.apache.logging.log4j.spi.AbstractLogger.error(AbstractLogger.java:673)
+	at command.AddVegetable.getIntInput(AddVegetable.java:56)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+Caused by: org.apache.logging.log4j.LoggingException: Error occurred while sending email
+	at org.apache.logging.log4j.core.net.SmtpManager.sendEvents(SmtpManager.java:133)
+	at org.apache.logging.log4j.core.appender.SmtpAppender.append(SmtpAppender.java:369)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	... 21 more
+Caused by: javax.mail.MessagingException: Could not connect to SMTP host: smtp.gmail.com, port: 465;
+  nested exception is:
+	javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2211)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at javax.mail.Transport.send0(Transport.java:254)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.logging.log4j.core.net.SmtpManager.sendMultipartMessage(SmtpManager.java:232)
+	at org.apache.logging.log4j.core.net.SmtpManager.sendEvents(SmtpManager.java:130)
+	... 23 more
+Caused by: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:130)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:378)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:316)
+	at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1326)
+	at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1203)
+	at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1146)
+	at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:393)
+	at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:476)
+	at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:447)
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:201)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1507)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1422)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+	at com.sun.mail.util.SocketFetcher.configureSSLSocket(SocketFetcher.java:626)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:400)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2175)
+	... 31 more
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:388)
+	at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:271)
+	at java.base/sun.security.validator.Validator.validate(Validator.java:256)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:230)
+	at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+	at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1310)
+	... 46 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:148)
+	at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:129)
+	at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+	at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:383)
+	... 51 more
+2024-11-07 19:59:40 [main] INFO : Ініціалізація меню.
+2024-11-07 19:59:40 [main] INFO : Завантаження овочів з файлу.
+2024-11-07 19:59:40 [main] INFO : Дані успішно завантажені з файлу: vegetables.txt
+2024-11-07 19:59:40 [main] INFO : Завантаження салату з файлу.
+2024-11-07 19:59:40 [main] INFO : Дані успішно завантажені з файлу: salad.txt
+2024-11-07 19:59:40 [main] INFO : Початок роботи меню.
+2024-11-07 19:59:58 [main] ERROR: Помилка введення: некоректне ціле число
+java.lang.NumberFormatException: For input string: "в"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:588)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at command.AddVegetable.getIntInput(AddVegetable.java:53)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+2024-11-07 20:00:05 [main] ERROR: Помилка введення: некоректне ціле число
+java.lang.NumberFormatException: For input string: "і"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:588)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at command.AddVegetable.getIntInput(AddVegetable.java:53)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+2024-11-07 20:00:33 [main] INFO : Овоч додано.
+2024-11-07 20:05:38 [main] ERROR: Помилка введення: некоректне ціле число
+java.lang.NumberFormatException: For input string: "і"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:588)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at command.AddVegetable.getIntInput(AddVegetable.java:53)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+2024-11-07 20:05:50 [main] ERROR: Сталася помилка: 
+org.apache.logging.log4j.core.appender.AppenderLoggingException: An exception occurred processing Appender EmailLogger
+	at org.apache.logging.log4j.core.appender.DefaultErrorHandler.error(DefaultErrorHandler.java:96)
+	at org.apache.logging.log4j.core.config.AppenderControl.handleAppenderError(AppenderControl.java:170)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:163)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:683)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:641)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:624)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:560)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:163)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2168)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2122)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2105)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1980)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1946)
+	at org.apache.logging.log4j.spi.AbstractLogger.error(AbstractLogger.java:673)
+	at command.AddVegetable.getIntInput(AddVegetable.java:56)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+Caused by: org.apache.logging.log4j.LoggingException: Error occurred while sending email
+	at org.apache.logging.log4j.core.net.SmtpManager.sendEvents(SmtpManager.java:133)
+	at org.apache.logging.log4j.core.appender.SmtpAppender.append(SmtpAppender.java:369)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	... 21 more
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 465; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2209)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at javax.mail.Transport.send0(Transport.java:254)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.logging.log4j.core.net.SmtpManager.sendMultipartMessage(SmtpManager.java:232)
+	at org.apache.logging.log4j.core.net.SmtpManager.sendEvents(SmtpManager.java:130)
+	... 23 more
+Caused by: java.net.UnknownHostException: smtp.gmail.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at java.base/java.net.Socket.connect(Socket.java:687)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:359)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2175)
+	... 31 more
+2024-11-07 20:06:01 [main] INFO : Ініціалізація меню.
+2024-11-07 20:06:01 [main] INFO : Завантаження овочів з файлу.
+2024-11-07 20:06:01 [main] INFO : Дані успішно завантажені з файлу: vegetables.txt
+2024-11-07 20:06:01 [main] INFO : Завантаження салату з файлу.
+2024-11-07 20:06:01 [main] INFO : Дані успішно завантажені з файлу: salad.txt
+2024-11-07 20:06:01 [main] INFO : Початок роботи меню.
+2024-11-07 20:06:06 [main] ERROR: Помилка введення: некоректне ціле число
+java.lang.NumberFormatException: For input string: "в"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:588)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at command.AddVegetable.getIntInput(AddVegetable.java:53)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+2024-11-07 20:06:06 [main] ERROR: Сталася помилка: 
+org.apache.logging.log4j.core.appender.AppenderLoggingException: An exception occurred processing Appender EmailLogger
+	at org.apache.logging.log4j.core.appender.DefaultErrorHandler.error(DefaultErrorHandler.java:96)
+	at org.apache.logging.log4j.core.config.AppenderControl.handleAppenderError(AppenderControl.java:170)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:163)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:134)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:125)
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:89)
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:683)
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:641)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:624)
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:560)
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	at org.apache.logging.log4j.core.Logger.log(Logger.java:163)
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2168)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2122)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2105)
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:1980)
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1946)
+	at org.apache.logging.log4j.spi.AbstractLogger.error(AbstractLogger.java:673)
+	at command.AddVegetable.getIntInput(AddVegetable.java:56)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+Caused by: org.apache.logging.log4j.LoggingException: Error occurred while sending email
+	at org.apache.logging.log4j.core.net.SmtpManager.sendEvents(SmtpManager.java:133)
+	at org.apache.logging.log4j.core.appender.SmtpAppender.append(SmtpAppender.java:369)
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:161)
+	... 21 more
+Caused by: com.sun.mail.util.MailConnectException: Couldn't connect to host, port: smtp.gmail.com, 465; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.gmail.com
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2209)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:740)
+	at javax.mail.Service.connect(Service.java:388)
+	at javax.mail.Service.connect(Service.java:246)
+	at javax.mail.Service.connect(Service.java:195)
+	at javax.mail.Transport.send0(Transport.java:254)
+	at javax.mail.Transport.send(Transport.java:124)
+	at org.apache.logging.log4j.core.net.SmtpManager.sendMultipartMessage(SmtpManager.java:232)
+	at org.apache.logging.log4j.core.net.SmtpManager.sendEvents(SmtpManager.java:130)
+	... 23 more
+Caused by: java.net.UnknownHostException: smtp.gmail.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:752)
+	at java.base/java.net.Socket.connect(Socket.java:687)
+	at com.sun.mail.util.SocketFetcher.createSocket(SocketFetcher.java:359)
+	at com.sun.mail.util.SocketFetcher.getSocket(SocketFetcher.java:238)
+	at com.sun.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2175)
+	... 31 more
+2024-11-07 20:07:09 [main] INFO : Ініціалізація меню.
+2024-11-07 20:07:09 [main] INFO : Завантаження овочів з файлу.
+2024-11-07 20:07:09 [main] INFO : Дані успішно завантажені з файлу: vegetables.txt
+2024-11-07 20:07:09 [main] INFO : Завантаження салату з файлу.
+2024-11-07 20:07:09 [main] INFO : Дані успішно завантажені з файлу: salad.txt
+2024-11-07 20:07:09 [main] INFO : Початок роботи меню.
+2024-11-07 20:08:13 [main] INFO : Ініціалізація меню.
+2024-11-07 20:08:13 [main] INFO : Завантаження овочів з файлу.
+2024-11-07 20:08:13 [main] INFO : Дані успішно завантажені з файлу: vegetables.txt
+2024-11-07 20:08:13 [main] INFO : Завантаження салату з файлу.
+2024-11-07 20:08:13 [main] INFO : Дані успішно завантажені з файлу: salad.txt
+2024-11-07 20:08:13 [main] INFO : Початок роботи меню.
+2024-11-07 20:08:26 [main] ERROR: Помилка введення: некоректне ціле число
+java.lang.NumberFormatException: For input string: "n"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:588)
+	at java.base/java.lang.Integer.parseInt(Integer.java:685)
+	at command.AddVegetable.getIntInput(AddVegetable.java:53)
+	at command.AddVegetable.execute(AddVegetable.java:39)
+	at command.AddVegetable.execute(AddVegetable.java:26)
+	at command.CommandManager.runCommand(CommandManager.java:5)
+	at main.Menu.menu(Menu.java:53)
+	at main.Main.main(Main.java:5)
+2024-11-07 20:09:27 [main] INFO : Овоч додано.
+2024-11-07 20:11:16 [main] INFO : Вихід з меню.
